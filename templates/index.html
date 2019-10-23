@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVC | In-house</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 push-s2">
+                    <div class="row">
+                        <div class="col s12 m8">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                  <span class="card-title">SVC In-house</span>
+                                  <p>{{ msg }}</p>
+                                        <div class="row">
+
+                                        <div class="col s4">
+                                            <form action='/' method="POST">
+                                                <div class="input-field">
+                                                    <input name="info" value='init' type="hidden" class="validate" required="required">
+                                                    <button class="btn waves-effect waves-light green" type="submit" name="action">init project
+                                                        <i class="material-icons right">graphic_eq</i>
+                                                    </button>
+                                                </div>  
+                                            </form>
+                                            {% if msg %}
+                                                <span> {{ msg }}
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="col s4">
+                                            <form action='/' method="POST">
+                                                <div class="input-field">
+                                                    <input name="info" value='clean' type="hidden" class="validate" required="required">
+                                                    <button class="btn waves-effect waves-light blue" type="submit" name="action">clean local
+                                                        <i class="material-icons right">cached</i>
+                                                    </button>
+                                                </div>  
+                                            </form>
+                                            {% if results %}
+                                                <span> {{ results }}
+                                            {% endif %}
+                                        </div>
+                                        <div class="col s4">
+                                            <form action='/' method="POST">
+                                                <div class="input-field">
+                                                    <input name="info" value='delete' type="hidden" class="validate" required="required">
+                                                    <button class="btn waves-effect waves-light red" type="submit" name="action">delete repo
+                                                        <i class="material-icons right">delete</i>
+                                                    </button>
+                                                </div>  
+                                            </form>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="card-action">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                           <i class="material-icons right">send</i>
+                                        </button>
+                                        <a href="/users">
+                                            <button class="btn blue waves-effect waves-light right" type="" name="action">branching
+                                            <i class="material-icons right">golf_course  </i>
+                                            </button>
+                                        </a>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                         
+            </div>
+        </div>
+
+    </div>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
